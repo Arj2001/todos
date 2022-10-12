@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TodoComponent } from './todo/todo.component';
+import { HttpClientModule } from "@angular/common/http";
 
 const addRoute:Routes=[
   {path:"",component:TodoComponent}
@@ -20,7 +21,8 @@ const addRoute:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(addRoute)
+    RouterModule.forRoot(addRoute),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
